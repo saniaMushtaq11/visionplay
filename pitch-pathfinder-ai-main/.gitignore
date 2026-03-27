@@ -1,0 +1,11 @@
+# Logs
+.venv/
+venv/
+node_modules/
+.env
+__pycache__/
+*.db
+*.sqlite
+*.pyc
+dist/
+build/

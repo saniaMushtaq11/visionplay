@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/10 hover:-translate-y-1;
+  }
+  
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-primary-foreground transition-colors duration-300;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary/80 text-secondary-foreground transition-colors duration-300;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulse 2s infinite;
+  }
+  
+  /* Custom gradients */
+  .bg-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-dark text-primary-foreground;
+  }
+  
+  .bg-gradient-accent {
+    @apply bg-gradient-to-r from-accent to-accent-light text-accent-foreground;
+  }
+  
+  .bg-gradient-success {
+    @apply bg-gradient-to-r from-success to-success-light text-success-foreground;
+  }
+  
+  .bg-gradient-info {
+    @apply bg-gradient-to-r from-info to-info-light text-info-foreground;
+  }
+  
+  /* Text gradients */
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-accent {
+    @apply bg-gradient-to-r from-accent to-accent-light bg-clip-text text-transparent;
+  }
+}
+
+/* Football-themed design system with green and premium styling */
+
+/* Custom animations for UI components */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 155 100% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 155 100% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 155 100% 8%;
+
+    /* Enhanced primary colors - Professional Football Theme */
+    --primary: 142 71% 35%; /* Rich green */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 142 76% 45%;
+    --primary-dark: 142 76% 25%;
+    --primary-light: 142 71% 55%;
+
+    --secondary: 142 25% 96%;
+    --secondary-foreground: 155 100% 8%;
+
+    --muted: 142 25% 97%;
+    --muted-foreground: 155 30% 40%;
+
+    --accent: 210 100% 50%; /* Vibrant blue */
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 210 100% 65%;
+
+    --success: 140 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 140 76% 50%;
+
+    --warning: 45 96% 58%; /* Bright yellow */
+    --warning-foreground: 0 0% 15%;
+
+    --destructive: 0 84% 60%; /* Bright red */
+    --destructive-foreground: 0 0% 100%;
+    
+    /* New colors */
+    --info: 210 100% 50%;
+    --info-foreground: 0 0% 100%;
+    --info-light: 210 100% 65%;
+    
+    --neutral: 220 14% 96%;
+    --neutral-foreground: 220 14% 20%;
+
+    --border: 142 25% 88%;
+    --input: 142 25% 88%;
+    --ring: 142 71% 35%;
+
+    /* Football-specific enhanced colors */
+    --pitch-green: 120 60% 25%;
+    --grass-light: 120 50% 35%;
+    --grass-dark: 120 65% 20%;
+    --field-lines: 0 0% 95%;
+
+    /* Enhanced gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 50%, hsl(var(--accent)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary-dark)) 0%, hsl(var(--primary)) 40%, hsl(var(--accent)) 100%);
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)) 0%, hsl(var(--success-light)) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.95), hsl(142 25% 98% / 0.8));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(var(--accent-light)) 100%);
+    --gradient-pitch: linear-gradient(180deg, hsl(var(--grass-light)) 0%, hsl(var(--pitch-green)) 100%);
+
+    /* Enhanced shadows */
+    --shadow-football: 0 25px 60px -12px hsl(var(--primary) / 0.35);
+    --shadow-card: 0 10px 35px -8px hsl(var(--primary) / 0.15);
+    --shadow-glow: 0 0 50px hsl(var(--primary-glow) / 0.4);
+    --shadow-button: 0 8px 25px -6px hsl(var(--primary) / 0.3);
+    --shadow-inner: inset 0 2px 4px hsl(0 0% 0% / 0.05);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-spring: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
