@@ -118,7 +118,7 @@ const CreatePost = ({ onPostCreated }: CreatePostProps) => {
 
       // Race between the actual request and the timeout
       const response = await Promise.race([
-        fetch('http://localhost:8003/analyze', {
+        fetch("https://visionplay-anin.onrender.com/analyze", {
           method: 'POST',
           body: formData,
         }),

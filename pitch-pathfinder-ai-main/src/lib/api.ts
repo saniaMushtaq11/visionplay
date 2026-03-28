@@ -1,4 +1,4 @@
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8003";
+export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://visionplay-anin.onrender.com';
 console.log("API_BASE_URL:", API_BASE_URL);
 export const FOOTBALL_API_KEY = (import.meta as any).env?.VITE_FOOTBALL_API_KEY || "";
 export const FOOTBALL_API_BASE_URL = "https://api.football-data.org/v4";
