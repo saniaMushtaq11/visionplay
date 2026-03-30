@@ -2,11 +2,12 @@ export type Post = {
   id: string;
   userId: string;
   user: {
-    id: string;
-    name: string;
-    position?: string;
-    club?: string;
-  };
+  id: string;
+  name: string;
+  profilePicture?: string; // ✅ ADD THIS
+  position?: string;
+  club?: string;
+};
   content: string;
   likes: number;
   comments: number;
